@@ -163,7 +163,7 @@ defmodule Bamboo.Phoenix do
   end
 
   defp verify_phoenix_dep do
-    unless Code.ensure_loaded?(Phoenix) do
+    unless Code.ensure_loaded?(Phoenix.View) do
       raise "You tried to use Bamboo.Phoenix, but Phoenix module is not loaded. " <>
               "Please add phoenix to your dependencies."
     end
